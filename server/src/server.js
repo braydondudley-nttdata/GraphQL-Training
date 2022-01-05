@@ -1,4 +1,4 @@
-import { makeExecutableSchema } from '@graphql-tools/schema';
+import { makeExecutableSchema } from 'graphql-tools';
 import { graphql } from 'graphql';
 
 const typeDefs = `
@@ -14,8 +14,8 @@ type Query {
 const resolvers = {
   Query: {
     hello: () => 'World',
-    name: () => 'James'
-  }
+    name: () => 'James',
+  },
 };
 
 const schema = makeExecutableSchema({ typeDefs, resolvers });
